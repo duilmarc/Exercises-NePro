@@ -21,3 +21,21 @@ function isEven(number){
     }
     return recursive(number);
 }
+
+function countBs(word){
+    let counterHits = 0;
+    for( let i = 0 ; i < word.length ; i++){
+        if( word[i] == 'B') 
+          counterHits++;
+    }
+  	return counterHits++;
+}
+
+function countChar(word,characterSearch){
+    let counterHits = 0;
+    for( let i = 0 ; i < word.length ; i++){
+        if( word[i] == characterSearch) 
+          counterHits++;
+    }
+  	return counterHits;
+}
