@@ -25,7 +25,6 @@ function fizzBuz(){
 //Metod 2 
 function fizzBuz2(){
     console.groupCollapsed('FizzBuzz Second Method');
-    let flag = true;
     for( i = 1 ; i <= 100 ; ++i){
         if( i % 3 === 0){
             (i % 5 === 0) ? console.log(i,'fuzzyBuzz') : console.log(i,'fuzzy');
