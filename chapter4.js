@@ -41,8 +41,16 @@ function reverseArray( values ){
     return reverse
 }
 function reverseArrayInPlace( arrayValue ){
-    lastvalue = arrayValue.pop()
-    arrayValue.unshift(lastvalue)
+    let middle = Math.floor(arrayValue.length/2);
+    let endIndex = arrayValue.length-1;
+    let temp;
+    for( let startIndex = 0 ; startIndex < middle ; ++startIndex ){
+        temp = arrayValue[startIndex];
+        arrayValue[startIndex] = arrayValue[endIndex]
+        arrayValue[endIndex] = temp
+        endIndex--
+    }
+
 }
 ////////////////////////// Execution
 console.log(reverseArray(["A", "B", "C"]));
