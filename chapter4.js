@@ -9,7 +9,6 @@ function range1(start,end){
 }
 
 function range(start,end, step=1){
-    console.log((Math.abs(end-start)+1)/Math.abs(step))
     const values = Array.from({length: Math.ceil((Math.abs(end-start)+1)/Math.abs(step))} ,
     function (item , index){
        return start + step*index;
@@ -24,7 +23,7 @@ function sum( numbers ){
         total += number
     return total
 }
-///////////// Ejecution
+///////////// Execution
 console.log(range1(1, 10));
 // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 console.log(range(5, 2, -1));
