@@ -24,12 +24,14 @@ function sum( numbers ){
     return total
 }
 ///////////// Execution
+console.groupCollapsed('Execution exercise 1')
 console.log(range1(1, 10));
 // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 console.log(range(5, 2, -1));
 // → [5, 4, 3, 2]
 console.log(sum(range(1, 10)));
 // → 55
+console.groupEnd()
 /////////////////////////////////////////////////////////////////////////////
 
 /////////////////////////// Exercise 2
@@ -53,10 +55,12 @@ function reverseArrayInPlace( arrayValue ){
 
 }
 ////////////////////////// Execution
+console.groupCollapsed('Execution exercise 2')
 console.log(reverseArray(["A", "B", "C"]));
 let arrayValue = [1, 2, 3, 4, 5];
 reverseArrayInPlace(arrayValue);
 console.log(arrayValue);
+console.groupEnd()
 /////////////////////////////////////////////////////////////////////////////
 
 /////////////////////////// Exercise 3
@@ -93,6 +97,8 @@ function nth( list , index) {
     }
     return node !== null ? node.value : -1
 }
+////////////////////////// Execution
+console.groupCollapsed('Execution exercise 3')
 console.log(arrayToList([]));
 // → {value: 10, rest: {value: 20, rest: null}}
 console.log(listToArray(arrayToList([])));
@@ -101,6 +107,7 @@ console.log(prepend(10, prepend(20, null)));
 // → {value: 10, rest: {value: 20, rest: null}}
 console.log(nth(arrayToList([]), 0));
 // → 20
+console.groupEnd()
 ////////////////////////////////////////////////////
 
 /////////////////////////// Exercise 4
@@ -121,10 +128,12 @@ function deepEqual( element_a , element_b ){
 }
 
 let obj = {here: {is: "an"}, object: 2};    
-
+////////////////////////// Execution 
+console.groupCollapsed('Execution exercise 4')
 console.log(deepEqual(obj, obj));
 // → true
 console.log(deepEqual(obj, {here: 1, object: 2}));
 // → false
 console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
 // → true
+console.groupEnd()
