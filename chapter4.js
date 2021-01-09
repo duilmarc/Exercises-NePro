@@ -31,3 +31,22 @@ console.log(range(5, 2, -1));
 console.log(sum(range(1, 10)));
 // → 55
 /////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////// Exercise 2
+function reverseArray( values ){
+    let reverse = []
+    while(values.length){
+        reverse = [ ...reverse , values.pop()]
+    }
+    return reverse
+}
+function reverseArrayInPlace( arrayValue ){
+    lastvalue = arrayValue.pop()
+    arrayValue.unshift(lastvalue)
+}
+////////////////////////// Execution
+console.log(reverseArray(["A", "B", "C"]));
+let arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
+/////////////////////////////////////////////////////////////////////////////
