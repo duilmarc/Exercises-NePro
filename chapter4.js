@@ -101,3 +101,30 @@ console.log(prepend(10, prepend(20, null)));
 // → {value: 10, rest: {value: 20, rest: null}}
 console.log(nth(arrayToList([]), 0));
 // → 20
+////////////////////////////////////////////////////
+
+/////////////////////////// Exercise 4
+
+function deepEqual( element_a , element_b ){
+    if( typeof element_a == "object" && typeof element_b == "object" ) {
+        let flag = true;
+        for( let key of Object.keys(element_a))
+            flag = flag && deepEqual(element_a[key],element_b[key])
+        return flag
+    }
+    if(typeof element_a === typeof element_b){
+        if (element_a === element_b)
+        return true
+    }
+    return false
+        
+}
+
+let obj = {here: {is: "an"}, object: 2};    
+
+console.log(deepEqual(obj, obj));
+// → true
+console.log(deepEqual(obj, {here: 1, object: 2}));
+// → false
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+// → true
