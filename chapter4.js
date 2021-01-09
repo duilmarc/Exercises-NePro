@@ -115,8 +115,8 @@ console.groupEnd()
 function deepEqual( element_a , element_b ){
     if( typeof element_a == "object" && typeof element_b == "object" ) {
         let flag = true;
-        for( let key of Object.keys(element_a))
-            flag = flag && deepEqual(element_a[key],element_b[key])
+        for( let property in element_a)
+            flag = flag && deepEqual(element_a[property],element_b[property])
         return flag
     }
     if(typeof element_a === typeof element_b){
