@@ -25,3 +25,22 @@ function ownLoop( value, testFunction, updateFunction, bodyfunction ){
 }
 
  ownLoop( 5 , n=>n>0 , n=>n-1, console.log)
+
+/// Exercises 3 
+
+function every( array , test ) {
+    iterator = 0
+    while( iterator < array.length ){
+        if( !test(array[iterator])) return false
+        iterator++
+    }
+    return true
+}
+
+console.log(every([1, 3, 5], n => n < 10));
+// → true
+console.log(every([2, 4, 16], n => n < 10));
+// → false
+console.log(every([], n => n < 10));
+// → true
+
