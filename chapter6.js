@@ -28,6 +28,7 @@ console.log(new Vec(3, 4).length);
 // → 5
 
 // Exercise 2
+
 class Group {
     constructor( ){
         this.elements = []
@@ -55,9 +56,35 @@ class Group {
     static from(array) {
         let group = new Group;
         for (let value of array) {
-          group.add(value);
+          group.add(value)
         }
-        return group;
-      }
+        return group
+    }
+
+    [Symbol.iterator] = () => {
+        return new GroupIterator(this)
+      };
   }
   
+
+  class GroupIterator {
+    constructor(group) {
+      this.elements = group.elements
+      this.size = group.elements.length
+      this.iterator = 0
+    }
+    next() {
+      if (this.iterator === this.size) 
+        return {done: true}
+      else{
+         let out = { value : this.elements[this.iterator], done: false }
+         this.iterator++
+         return out
+      }
+    }
+  }
+
+  let group =  Group.from(["a", "b", "c"]);
+  for (let value of Group.from(["a", "b", "c"])) {
+    console.log(value);
+  }
