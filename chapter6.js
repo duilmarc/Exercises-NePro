@@ -90,7 +90,5 @@ class Group {
   }
 // Exercise 4 
 // Accesing to prototype functions 
-let map = {one: true, two: true, hasOwnProperty: true};
-
-  console.log(Object.prototype.hasOwnProperty.call(map,"one"));
-  Object.prototype.hasOwnProperty.call(map)
+let map = {one: true, two: true, hasOwnProperty: true}
+console.log(Object.prototype.hasOwnProperty.call(map,"one"))
