@@ -49,3 +49,13 @@ function verify(regexp, yes, no) {
       console.log(`Denied for the match for '${str}'`);
     }
 }
+
+// excercise 2
+let text = "'I'm the cook,' he said, 'it's my job.'";
+// Change this call.
+// RegExp = /(^|\W)'|'(\W|$)/g -> take all the letter should be [non-word character] +  ' or  ' +[non-word character] 
+// and reemplace with [ non-word character] " [ non-word character]
+console.log(text.replace(/(^|\W)'|'(\W|$)/g, '$1"$2'));
+// → "I'm the cook," he said, "it's my job."
+
+
