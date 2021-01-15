@@ -62,7 +62,7 @@ console.log(text.replace(/(^|\W)'|'(\W|$)/g, '$1"$2'));
 // exercise 3
 
 // Fill in this regular expression.
-let number = /^(-|\+)?(\d+(\.\d*)?|\.\d+)([eE](-|\+)?\d+)?$/;
+let number = /^(-|\+)?(\d+(\.\d*)?|\.\d+)(e(-|\+)?\d+)?$/i;
 
 // Tests:
 for (let str of ["1", "-1", "+15", "1.55", ".5", "5.",
@@ -79,5 +79,7 @@ for (let str of ["1a", "+-1", "1.2.3", "1+1", "1e4.5",
   if (number.test(str)) {
     console.log(`Incorrectly accepted '${str}'`);
   }
+  else{
+     console.log(`Denied to '${str}'`);
+  }
 }
-
