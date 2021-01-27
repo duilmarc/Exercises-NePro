@@ -30,7 +30,7 @@ type Tests = string | undefined extends string ? 'a' : 'b'
 
 type GetOptional<T> = { [key in keyof T as T[key] extends Required<T>[key] ? never : key ] : T[key] }
 
-type Test = GetOptional<{ foo: number, bar?: string }>
+type Test = GetOptional<{ foo: number, bar?: string } >
 
 /* _____________ Test Cases _____________ */
 import { Equal, Expect } from '@type-challenges/utils'
