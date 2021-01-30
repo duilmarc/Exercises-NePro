@@ -110,9 +110,17 @@ mustang.drive()
 // Your method may be passed punctuation, numbers or other non-letter characters
 // and should neither modify them nor break when encountering them.
 
+String.prototype.grammarPolice = function()
+{
+  const reg = /\b(\w(\w)+)\b/g
+  let string = this.valueOf().replace(reg,str => str[0].toUpperCase() + str.substr(1).toLowerCase())
+  return string
+}
+var string = 'OH HELLO THERE'
 
+let string2 = string.grammarPolice()
 
-
+console.log(string2)
 // CODE HERE...
 
 
