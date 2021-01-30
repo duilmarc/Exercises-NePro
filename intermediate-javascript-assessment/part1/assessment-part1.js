@@ -82,10 +82,17 @@ function daBears(){
 
 // CODE HERE...
 
+function Vehicle(){
+  this.gasRemaining = 100
+}
+Vehicle.prototype.drive = function () { this.gasRemaining = this.gasRemaining - 25 }
 
+const charger = new Vehicle()
+const mustang = new Vehicle()
 
-
-
+charger.drive()
+mustang.drive()
+mustang.drive()
 // -----------------------------------------------------------------------------
 
 // *************
