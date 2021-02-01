@@ -55,7 +55,21 @@ function applyBinding( magicAnimals, updateAnimal, id){
 var foo;
 
 // CODE HERE...
+var foo;
 
+// CODE HERE...
+function promiseMe($q){
+    return new Promise((resolve,reject)=>{
+
+        setTimeout(()=>
+        {
+            foo  = 'bar'
+            resolve(foo)
+        }
+        , 20)
+
+    })
+}
 
 
 // *************
