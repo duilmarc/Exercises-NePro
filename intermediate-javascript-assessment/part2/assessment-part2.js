@@ -139,6 +139,17 @@ function accountingOffice( assets )
 
 // CODE HERE...
 
+function forgetter( name )
+{
+  let remember  = []
+  return function rememberall( item ){
+    remember.push(item)
+    return {
+      name,
+      remember 
+    }
+  }
+}
 
 
 // *************
