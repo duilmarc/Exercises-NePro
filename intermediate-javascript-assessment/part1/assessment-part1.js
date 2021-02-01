@@ -160,7 +160,11 @@ function valueType( paramOne, paramTwo){
 // Jasmine will pass a promise into your function through that parameter.
 // Your function will need to handle that promise.
 // When your promise receives its results, set variable 'theAnswer' (seen below) equal to the result.
-
 var theAnswer = "Unknown";
+
+async function promiseCatcher( promise ){
+  theAnswer = await promise
+}
+
 
 // CODE HERE...
