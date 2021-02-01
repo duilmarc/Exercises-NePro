@@ -92,8 +92,9 @@ boundToElephant()
 // and return the bound function.
 
 // CODE HERE...
-
-
+function deathStar( capacity, crew ){
+  return capacity.bind(crew)
+}
 
 // *************
 // * PROBLEM 4 *
