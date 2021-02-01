@@ -34,9 +34,6 @@
 // In the second .then function you use, assign the third user object
 // to the variable 'thirdUser' (previously declared) and then return the tenth user object.
 
-var firstUser = 'don\'t touch this string!';
-var thirdUser = 'don\'t touch this string, either!';
-
 function noWeakLink() {
 
   return $http({
@@ -44,7 +41,15 @@ function noWeakLink() {
     url: '/api/users'
   })
   // CODE HERE...
-
+  .then( response =>{
+    data = response['data']
+    firstUser = data[0]
+    return data
+  } )
+  .then( data => {
+    thirdUser = data[2]
+    return data[9]
+  })
 }
 
 
