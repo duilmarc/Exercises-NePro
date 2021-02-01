@@ -14,6 +14,10 @@
 
 // CODE HERE...
 
+function callBinding( magicAnimals, updateAnimal, id){
+    const animalPicked = magicAnimals.filter( animal => animal.id = id)
+    return updateAnimal.call(animalPicked,'Trogdor')
+}
 
 
 // *************
