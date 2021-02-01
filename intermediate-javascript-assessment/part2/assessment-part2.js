@@ -109,6 +109,11 @@ function deathStar( capacity, crew ){
 
 // CODE HERE...
 
+function accountingOffice( assets )
+{
+    return (liabilities) =>
+      assets + liabilities
+}
 
 
 // *************
