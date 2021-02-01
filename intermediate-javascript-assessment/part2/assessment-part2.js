@@ -33,7 +33,6 @@
 
 // In the second .then function you use, assign the third user object
 // to the variable 'thirdUser' (previously declared) and then return the tenth user object.
-
 function noWeakLink() {
 
   return $http({
@@ -51,7 +50,6 @@ function noWeakLink() {
     return data[9]
   })
 }
-
 
 
 // *************
