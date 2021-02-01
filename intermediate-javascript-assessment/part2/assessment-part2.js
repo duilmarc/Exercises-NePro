@@ -166,3 +166,44 @@ function accountingOffice( assets )
 // NOTE: Neither hunger nor danger should be able to exceed 100 or drop below 0.
 
 // CODE HERE...
+function frodo(startingHungerValue, startingDangerValue) {
+  let danger = startingDangerValue
+  let hunger = startingHungerValue
+  const dinnerOverFire =()=> {  
+      danger = danger + 40
+      if( danger > 100){
+        danger = 100
+      }  
+      hunger = hunger - 25 
+      if( hunger < 0 )
+      {
+        hunger = 0
+      }
+      return {
+        danger, 
+        hunger
+      }
+  }
+
+  const hidingInBush = () => {
+      danger = danger - 20
+      if( danger < 0){
+        danger = 0
+      }  
+      hunger = hunger + 35 
+      if( hunger > 100 )
+      {
+        hunger = 100
+      }
+      return {
+        danger, 
+        hunger
+      }
+  }
+
+  const methods =  {
+    dinnerOverFire,
+    hidingInBush
+  }
+  return methods
+}
