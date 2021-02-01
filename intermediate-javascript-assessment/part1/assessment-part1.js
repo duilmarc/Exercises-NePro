@@ -140,9 +140,18 @@ console.log(string2)
 // In all other cases, return "Different values"
 
 // CODE HERE...
-
-
-
+function valueType( paramOne, paramTwo){
+  
+  if( paramOne === paramTwo )
+  {
+    return 'Exactly the same'
+  }
+  else if( paramOne == paramTwo )
+  {
+    return 'Same value, different types'
+  }
+   return 'Different values'
+}
 // *************
 // * PROBLEM 5 *
 // *************
