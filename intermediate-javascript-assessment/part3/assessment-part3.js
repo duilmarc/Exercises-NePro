@@ -15,7 +15,7 @@
 // CODE HERE...
 
 function callBinding( magicAnimals, updateAnimal, id){
-    const animalPicked = magicAnimals.filter( animal => animal.id = id)
+    const animalPicked = magicAnimals.filter( animal => animal.id == id)
     return updateAnimal.call(animalPicked,'Trogdor')
 }
 
@@ -34,7 +34,7 @@ function callBinding( magicAnimals, updateAnimal, id){
 // CODE HERE...
 
 function applyBinding( magicAnimals, updateAnimal, id){
-    const animalPicked = magicAnimals.filter( animal => animal.id = id)[0]
+    const animalPicked = magicAnimals.filter( animal => animal.id == id)[0]
     return updateAnimal.apply(animalPicked,['being majestic', 'eating rainbows'])
 }
 
