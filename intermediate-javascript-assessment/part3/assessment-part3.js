@@ -85,3 +85,18 @@ function promiseMe($q){
 // and then resolve the array as you complete your promise.
 
 // CODE HERE...
+async function emailList($q, $http){
+    let emails = await new Promise( (resolve) =>{
+        $http({
+            method: 'GET',
+            url: '/api/users'
+          }).then(
+              (response)=> {
+                  data = response['data'] 
+                  data = data.map((user) => user.email)
+                  resolve(data)
+          })    
+    })
+    return emails
+}
+
